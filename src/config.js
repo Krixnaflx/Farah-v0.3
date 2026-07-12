@@ -10,8 +10,8 @@ module.exports = {
 
     PREFIX: process.env.PREFIX, 
     STATUS: {
-        status: 'invisible', // online / idle / dnd / invisible
-        activity: '.help | Farah-v0.3'
+        status: 'dnd', // online / idle / dnd / invisible
+        activity: 'Farah | .help'
     },
 
     SUPPORT_SERVER: 'https://discord.gg/BWRS8VHFYr',
