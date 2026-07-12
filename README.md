@@ -230,7 +230,7 @@ src/
 
 ## Credits
 
-**Developer** — [Krishna](https://github.com/Krixnaflx) (Aegis)  
+**Developer** — [Krishna](https://github.com/Krixnaflx) (OG)  
 **Organisation** — [Farah Development](https://github.com/Farah001)
 
 ---
