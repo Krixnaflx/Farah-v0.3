@@ -100,6 +100,7 @@ Background systems that run without manual input.
 
 - **Join to Create (J2C)** — dynamic temporary voice channels
 - **Autopost** — schedule recurring messages in any channel
+- **Autobump** — automated server bump scheduling
 - **Autoreact** — auto-react to messages in configured channels
 - **Vanity Roles** — assign roles based on user Discord status text
 - **Reaction Roles** — reaction and button-based role assignment
@@ -119,8 +120,8 @@ Engagement commands for active communities.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Krixnaflx/Farah-v0.3
-cd Farah
+git clone https://github.com/AeroXDevs/melon.git
+cd melon
 
 # 2. Install dependencies
 npm install
@@ -136,9 +137,9 @@ npm start
 
 ## Emoji Synchronisation
 
-Farah uses **application emojis** — emojis uploaded directly to the bot's Discord application — so they are available globally across every server without requiring a dedicated emoji server.
+Melon uses **application emojis** — emojis uploaded directly to the bot's Discord application — so they are available globally across every server without requiring a dedicated emoji server.
 
-On first start, if a `tempassets/` folder is present in the project root containing emoji images (`.webp` for static, `.gif` for animated), Farah automatically:
+On first start, if a `tempassets/` folder is present in the project root containing emoji images (`.webp` for static, `.gif` for animated), Melon automatically:
 
 1. Uploads every image to the bot's application emojis via the Discord API
 2. Updates `src/emojis.json` with the new emoji IDs
@@ -183,6 +184,7 @@ src/
 │   ├── ai/                      Melon AI chat
 │   ├── antinuke/                Antinuke protection
 │   ├── automod/                 Automated moderation
+│   ├── autobump/                Server bump automation
 │   ├── autopost/                Scheduled message posting
 │   ├── autoreact/               Auto-reaction bindings
 │   ├── farewell/                Farewell messages
@@ -228,8 +230,8 @@ src/
 
 ## Credits
 
-**Developer** — [Krixnaflx](https://github.com/Krixnaflx) (Krishna)  
-**Organisation** — [Farah Devlopment](https://discord.gg/BWRS8VHFYr)
+**Developer** — [Krishna](https://github.com/Krixnaflx) (Aegis)  
+**Organisation** — [Farah Development](https://github.com/Farah001)
 
 ---
 
@@ -243,9 +245,7 @@ Join the Farah Development Discord server for help, updates, and community suppo
 
 <div align="center">
 
-© 2026 Krixnaflx — Farah Development. All rights reserved.  
+© 2026 Krixnaflx (Aegis) — Farah Development. All rights reserved.  
 See [LICENSE](./LICENSE) for usage terms.
 
 </div>
-#   F a r a h - v 0 . 3  
- 
