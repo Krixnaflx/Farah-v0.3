@@ -10,15 +10,50 @@ module.exports = {
 
     PREFIX: process.env.PREFIX, 
 
-    STATUS: {
-        status: 'dnd', // online / idle / dnd / invisible
-        activity: '.help | Farah-v0.3'
-    },
+    client.once("ready", () => {
+    console.log(`${client.user.tag} is online!`);
 
-    STATUS: {
-        status: 'dnd', // online / idle / dnd / invisible
-        activity: 'Developed by Krixnaflx'
-    },
+    const updatePresence = () => {
+        const activities = [
+            ".help | Farah-v0.3",
+            "Developed by Krixnaflx",
+            `${client.guilds.cache.size} Servers watching Farah`
+        ];
+
+        let index = 0;
+
+        // Set first activity immediately
+        client.user.setPresence({
+            status: "dnd",
+            activities: [
+                {
+                    name: activities[index],
+                    type: 3 // WATCHING
+                }
+            ]
+        });
+
+        // Rotate every 5 seconds
+        setInterval(() => {
+            index = (index + 1) % activities.length;
+
+            // Update guild count every rotation
+            activities[2] = `${client.guilds.cache.size} Servers watching Farah`;
+
+            client.user.setPresence({
+                status: "dnd",
+                activities: [
+                    {
+                        name: activities[index],
+                        type: 3 // WATCHING
+                    }
+                ]
+            });
+        }, 5000);
+    };
+
+    updatePresence();
+});
 
     SUPPORT_SERVER: 'https://discord.gg/BWRS8VHFYr',
 
