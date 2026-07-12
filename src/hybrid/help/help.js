@@ -201,11 +201,12 @@ async function createHelpContainer(categoryKey = null, botAvatarURL, userAvatarU
         }
 
         const allCats = { ...categories, ...extraCategories };
-        const categoryList = Object.values(allCats).map(cat => {
-            const emojiStr = cat.catEmoji && emojis[cat.catEmoji] ? emojis[cat.catEmoji] : '';
-            return `> ${emojiStr} \`»\` **${cat.name}**`;
-        }).join('\n');
-         `\n\n> 🔗 **[Support Server](${config.SUPPORT_SERVER})**`;
+        const categoryList =
+            Object.values(allCats).map(cat => {
+                const emojiStr = cat.catEmoji && emojis[cat.catEmoji] ? emojis[cat.catEmoji] : '';
+                return `> ${emojiStr} \`»\` **${cat.name}**`;
+            }).join('\n') +
+            `\n\n> 🔗 **[Support Server](${config.SUPPORT_SERVER})**`;
 
         const headerSection = new SectionBuilder()
             .addTextDisplayComponents(
