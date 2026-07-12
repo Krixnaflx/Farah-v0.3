@@ -205,6 +205,7 @@ async function createHelpContainer(categoryKey = null, botAvatarURL, userAvatarU
             const emojiStr = cat.catEmoji && emojis[cat.catEmoji] ? emojis[cat.catEmoji] : '';
             return `> ${emojiStr} \`»\` **${cat.name}**`;
         }).join('\n');
+         `\n\n> 🔗 **[Support Server](${config.SUPPORT_SERVER})**`;
 
         const headerSection = new SectionBuilder()
             .addTextDisplayComponents(
@@ -213,8 +214,7 @@ async function createHelpContainer(categoryKey = null, botAvatarURL, userAvatarU
             .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
                     `- **Prefix for this server:** \`${guildPrefix}\`\n` +
-                    `- **Set prefix with:** **/setprefix**\n` +
-                    `- **Join [Support Server](${config.SUPPORT_SERVER}) For Help**`
+                    `- **Set prefix with:** **/setprefix**\n` 
                 )
             );
         if (botAvatarURL) {
