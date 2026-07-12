@@ -206,7 +206,7 @@ async function createHelpContainer(categoryKey = null, botAvatarURL, userAvatarU
                 const emojiStr = cat.catEmoji && emojis[cat.catEmoji] ? emojis[cat.catEmoji] : '';
                 return `> ${emojiStr} \`»\` **${cat.name}**`;
             }).join('\n') +
-            `\n\n> 🔗 **[Support Server](${config.SUPPORT_SERVER})**`;
+            `\n\n> 🔗 **[Support](${config.SUPPORT_SERVER})** • 🌐 **[Website](https://yourwebsite.com)** • ➕ **[Invite](https://discord.com/oauth2/authorize?client_id=${clientId}&permissions=8&scope=bot%20applications.commands)**`;
 
         const headerSection = new SectionBuilder()
             .addTextDisplayComponents(
