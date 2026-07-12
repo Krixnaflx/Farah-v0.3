@@ -9,21 +9,11 @@ module.exports = {
     OWNER_ID: process.env.OWNER_ID, 
 
     PREFIX: process.env.PREFIX, 
+    STATUS: {
+        status: 'idle', // online / idle / dnd / invisible
+        activity: '.help | @Melon >3'
+    },
 
-    STATUS: [
-    {
-        status: "dnd",
-        activity: ".help | Farah-v0.3"
-    },
-    {
-        status: "dnd",
-        activity: "Developed by Krixnaflx"
-    },
-    {
-        status: "dnd",
-        activity: "{guilds} Servers watching Farah"
-    }
-        
     SUPPORT_SERVER: 'https://discord.gg/BWRS8VHFYr',
 
     DATABASE_URL: process.env.DATABASE_URL, 
