@@ -1,0 +1,52 @@
+// © Author: Krixnaflx
+// https://discord.gg/BWRS8VHFYr
+
+
+
+const { ContainerBuilder, TextDisplayBuilder, SeparatorBuilder, SeparatorSpacingSize, MediaGalleryBuilder, MediaGalleryItemBuilder, MessageFlags } = require("discord.js");
+const { getNekoGif } = require('../../../../lib/nekoHelper');
+
+module.exports = {
+  async execute(interaction) {
+    const author = interaction.user;
+
+    await interaction.deferReply({ flags: MessageFlags.IsPersistent | MessageFlags.IsComponentsV2 });
+
+    const gifUrl = await getNekoGif("cry");
+
+    const container = new ContainerBuilder().setAccentColor(0x2B2D31)
+      .addTextDisplayComponents(
+        new TextDisplayBuilder().setContent("# Crying")
+      )
+      .addSeparatorComponents(
+        new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+      );
+
+    if (gifUrl) {
+      container.addMediaGalleryComponents(
+        new MediaGalleryBuilder().addItems([
+          new MediaGalleryItemBuilder().setURL(gifUrl)
+        ])
+      );
+    }
+
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`**${author.username}** is crying`)
+    );
+
+    container.addSeparatorComponents(
+      new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+    );
+
+    await interaction.editReply({ components: [container], flags: MessageFlags.IsPersistent | MessageFlags.IsComponentsV2 });
+  }
+};
+
+/**
+ * Project: Farah
+ * Author: Krixnaflx
+ * Organization: Farah Development
+ * GitHub: https://github.com/Krixnaflx
+ * License: Custom
+ * © 2026-30 Farah Development. All rights reserved.
+ */

@@ -1,0 +1,44 @@
+// © Author: Krixnaflx
+// https://discord.gg/BWRS8VHFYr
+
+const { DataTypes } = require('sequelize');
+const sequelize = require('../sequelize');
+const BaseModel = require('../BaseModel');
+
+class TicketCategory extends BaseModel {
+    static CACHE_KEYS = [['guildId']];
+    static init(sequelize) {
+        super.init(
+            {
+                id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+                guildId: { type: DataTypes.STRING, allowNull: false },
+                categoryName: { type: DataTypes.STRING, allowNull: false },
+                categoryId: { type: DataTypes.STRING, allowNull: true },
+                emoji: { type: DataTypes.STRING, allowNull: true },
+                description: { type: DataTypes.STRING, allowNull: true },
+            },
+            {
+                sequelize,
+                modelName: 'TicketCategory',
+                tableName: 'ticket_categories',
+                timestamps: true,
+                indexes: [
+                    { fields: ['guildId'] },
+                    { fields: ['guildId', 'categoryName'] },
+                ],
+            }
+        );
+        return this;
+    }
+}
+
+module.exports = TicketCategory;
+
+/**
+ * Project: Farah
+ * Author: Krixnaflx
+ * Organization: Farah Development
+ * GitHub: https://github.com/Krixnaflx
+ * License: Custom
+ * © 2026-30 Farah Development. All rights reserved.
+ */
