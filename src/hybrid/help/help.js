@@ -77,7 +77,7 @@ const categories = {
         commands: [
             'howdumb', 'howgay', 'dare', 'truth', 'simprate',
             'pickup', 'rickroll', 'meme',
-            'nitro', 'token', 'texttoemoji', 'wizz', 'hack', 'ship'
+            'nitro', 'texttoemoji', 'wizz', 'hack', 'ship'
         ]
     },
     social: {
