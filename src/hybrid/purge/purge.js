@@ -162,6 +162,19 @@ module.exports = {
 
         let amount, filterType = null, targetUserId = null, containsText = null;
 
+        // .pb -> purge 5 bot messages
+        if (!isSlash) {
+            const commandUsed = interactionOrMessage.content
+                .trim()
+                .split(/\s+/)[0]
+                .replace(/^[^\w]+/, "")
+                .toLowerCase();
+            if (commandUsed === "pb") {
+                amount = 5;
+                filterType = "bots";
+            }
+        }
+
         if (isSlash) {
             amount = interactionOrMessage.options.getInteger('amount');
             filterType = interactionOrMessage.options.getString('filter');
