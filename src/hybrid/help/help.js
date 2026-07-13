@@ -24,7 +24,7 @@ const categories = {
         name: 'Moderation',
         description: 'Ban, kick, mute, lock & more',
         catEmoji: 'cat_moderation',
-        commands: ['kick', 'ban', 'softban', 'unban', 'slowmode', 'lock', 'unlock', 'tempban', 'mute', 'unmute', 'temprole', 'rolegive', 'roleremove', 'nick']
+        commands: ['kick', 'ban', 'softban', 'unban', 'slowmode', 'lock', 'unlock', 'tempban', 'mute', 'unmute', 'temprole', 'roleadd', 'roleremove', 'nick']
     },
     antinuke: {
         name: 'Antinuke',
@@ -78,16 +78,6 @@ const categories = {
             'howdumb', 'howgay', 'dare', 'truth', 'simprate',
             'pickup', 'rickroll', 'meme',
             'nitro', 'token', 'texttoemoji', 'wizz', 'hack', 'ship'
-        ]
-    },
-    roleplay: {
-        name: 'Roleplay',
-        description: 'Hug, kiss, slap & expressive actions',
-        catEmoji: 'cat_roleplay',
-        commands: [
-            'hug', 'kiss', 'lick', 'pat', 'slap', 'tickle', 'poke', 'deathstare',
-            'dance', 'cry', 'laugh', 'smile', 'blush', 'wink', 'thumbsup', 'clap',
-            'bow', 'salute', 'facepalm', 'shrug', 'sleep', 'eat', 'kill', 'run'
         ]
     },
     social: {
@@ -173,9 +163,9 @@ const extraCategories = {
     },
     ai: {
         name: 'Artificial Intelligence',
-        description: 'AI chat, image analysis & more',
+        description: 'AI chat, image analysis & more   (Future Updates Getting Planned)',
         catEmoji: 'cat_ai',
-        commands: ['ai enable', 'ai disable', 'ai analyse', 'ai ask']
+        commands: ['ai ask']
     },
     reactionroles: {
         name: 'Reaction Roles',
