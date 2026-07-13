@@ -17,7 +17,7 @@ function modReply(message, title, body) {
 module.exports = {
   name: 'roleremove',
   description: 'Remove a role from a user',
-  aliases: ['removerole', 'takerole'],
+  aliases: ['removerole', 'rm'],
   
   async execute(message, args) {
     if (!message.member.permissions.has(PermissionFlagsBits.ManageRoles))
