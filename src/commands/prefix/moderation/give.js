@@ -17,7 +17,7 @@ function modReply(message, title, body) {
 module.exports = {
   name: 'rolegive',
   description: 'Give a role to a user',
-  aliases: ['giverole', 'addrole'],
+  aliases: ['roleadd', 'ra'],
   
   async execute(message, args) {
     if (!message.member.permissions.has(PermissionFlagsBits.ManageRoles))
