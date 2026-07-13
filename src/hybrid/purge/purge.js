@@ -186,19 +186,19 @@ module.exports = {
             containsText = interactionOrMessage.options.getString('contains');
         } else {
             const validFilters = ['bots', 'humans', 'attachments', 'links', 'embeds'];
-            for (const arg of args) {
-                if (!amount && /^\d+$/.test(arg)) {
-                    amount = parseInt(arg);
-                } else if (!filterType && validFilters.includes(arg.toLowerCase())) {
+
+                for (const arg of args) {
+                    if (amount == null && /^\d+$/.test(arg)) {
+                        amount = parseInt(arg);
+              } else if (filterType == null && validFilters.includes(arg.toLowerCase())) {
                     filterType = arg.toLowerCase();
-                } else if (!targetUserId && arg.match(/^<@!?(\d+)>$/)) {
+            } else if (!targetUserId && arg.match(/^<@!?(\d+)>$/)) {
                     targetUserId = arg.match(/^<@!?(\d+)>$/)[1];
                     filterType = 'user';
                 } else if (!containsText) {
                     containsText = arg;
                 }
             }
-        }
 
         if (!amount || isNaN(amount) || amount < 1) {
             return reply(interactionOrMessage, [
