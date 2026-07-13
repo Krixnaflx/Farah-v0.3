@@ -12,6 +12,7 @@ module.exports = {
     name: 'noprefix',
     description: 'Add or remove a user from the no-prefix system',
     usage: 'noprefix add <user> <duration> | noprefix remove <user> | noprefix list',
+    aliases: ['prefixbypass', 'np', 'nop'],
     category: 'owner',
     ownerOnly: true,
 
