@@ -11,7 +11,7 @@ module.exports = {
     PREFIX: process.env.PREFIX, 
     STATUS: {
         status: 'dnd', // online / idle / dnd / invisible
-        activity: 'Farah | .help'
+        activity: 'Married To Rasmalai <3'
     },
 
     SUPPORT_SERVER: 'https://discord.gg/BWRS8VHFYr',
