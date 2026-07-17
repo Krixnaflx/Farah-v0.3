@@ -20,6 +20,7 @@ module.exports = {
   name: 'avatar',
   description: 'Get the avatar of a user',
   usage: 'avatar [user]',
+  aliases: ['av', 'pfp'],
   category: 'general',
   
   async execute(message, args) {
